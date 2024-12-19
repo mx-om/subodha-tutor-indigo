@@ -110,8 +110,11 @@ hooks.Filters.ENV_PATCHES.add_items(
             "mfe-dockerfile-post-npm-install-learning",
             """
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.1'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
-RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+#RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
+#RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+RUN npm install '@edx/frontend-component-header@git+https://github.com/code-with-om/indigo-frontend-component-header-dist.git#master'
+RUN npm install @edly-io/indigo-frontend-component-footer@git+https://github.com/ManpraXSoftware/frontend-component-footer-dist.git#main
+RUN npm install @openedx/frontend-slot-footer@git+https://github.com/ManpraXSoftware/frontend-component-footer-dist.git#main
 
 COPY indigo/env.config.jsx /openedx/app/
 """,
@@ -147,8 +150,10 @@ COPY indigo/env.config.jsx /openedx/app/
             "mfe-dockerfile-post-npm-install-profile",
             """
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.1'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
+#RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+RUN npm install '@edx/frontend-component-header@git+https://github.com/code-with-om/indigo-frontend-component-header-dist.git#master'
+RUN npm install @openedx/frontend-slot-footer@git+https://github.com/ManpraXSoftware/frontend-component-footer-dist.git#main
 
 COPY indigo/env.config.jsx /openedx/app/
 """,
@@ -157,8 +162,10 @@ COPY indigo/env.config.jsx /openedx/app/
             "mfe-dockerfile-post-npm-install-account",
             """
 RUN npm install '@edx/brand@npm:@edly-io/indigo-brand-openedx@^2.1.1'
-RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
+#RUN npm install '@edx/frontend-component-header@npm:@edly-io/indigo-frontend-component-header@^3.1.3'
 RUN npm install @edly-io/indigo-frontend-component-footer@^2.0.0
+RUN npm install '@edx/frontend-component-header@git+https://github.com/code-with-om/indigo-frontend-component-header-dist.git#master'
+RUN npm install @openedx/frontend-slot-footer@git+https://github.com/ManpraXSoftware/frontend-component-footer-dist.git#main
 
 COPY indigo/env.config.jsx /openedx/app/
 """,
